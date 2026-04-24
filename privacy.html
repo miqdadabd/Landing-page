@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi — Digital Ally</title>
+  <style>
+    :root { --cyan: #0cc0df; --bg: #0a0a0f; --surface: #111118; --border: rgba(255,255,255,0.08); --text: #f0f0f5; --text2: #9090a8; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', Inter, sans-serif; font-size: 0.97rem; line-height: 1.75; max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 5rem; }
+    nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); margin-bottom: 2.5rem; }
+    .logo { font-weight: 800; font-size: 1.1rem; }
+    .logo span { color: var(--cyan); }
+    a.back { color: var(--cyan); text-decoration: none; font-size: 0.85rem; }
+    a.back:hover { text-decoration: underline; }
+    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.4rem; letter-spacing: -0.02em; }
+    .updated { color: var(--text2); font-size: 0.85rem; margin-bottom: 2.5rem; }
+    h2 { font-size: 1.1rem; font-weight: 700; color: var(--cyan); margin: 2.5rem 0 0.75rem; }
+    p, li { color: var(--text2); }
+    ul { padding-left: 1.5rem; display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.5rem; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; }
+    .badge { display: inline-block; background: rgba(12,192,223,0.12); color: var(--cyan); border: 1px solid rgba(12,192,223,0.25); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.7rem; border-radius: 100px; letter-spacing: 0.05em; }
+    footer { margin-top: 4rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text2); font-size: 0.82rem; text-align: center; }
+    a { color: var(--cyan); }
+  </style>
+</head>
+<body>
+<nav>
+  <div class="logo">Digital<span>Ally</span></div>
+  <a class="back" href="index.html">← Kembali ke Beranda</a>
+</nav>
+
+<h1>Kebijakan Privasi</h1>
+<p class="updated">Terakhir diperbarui: 14 April 2026 · <span class="badge">Versi 2.0</span></p>
+
+<p>Digital Ally ("kami", "milik kami") berkomitmen melindungi privasi Anda. Dokumen ini menjelaskan secara transparan data apa yang kami kumpulkan, bagaimana kami menggunakannya, dan hak-hak Anda sebagai pengguna layanan kami, termasuk aplikasi <strong>Jurnal Guru</strong> dan <strong>EduTrack</strong>.</p>
+
+<h2>1. Data yang Kami Kumpulkan</h2>
+<p>Kami hanya mengumpulkan data yang diperlukan untuk mengoperasikan layanan:</p>
+<ul>
+  <li><strong>Alamat Email</strong> — diperoleh dari akun Google Anda, digunakan sebagai identifikasi unik akun.</li>
+  <li><strong>Nama Lengkap</strong> — diperoleh dari profil Google, digunakan untuk personalisasi tampilan dalam aplikasi.</li>
+  <li><strong>Foto Profil Google</strong> — ditampilkan di antarmuka aplikasi jika tersedia (tidak disimpan di server kami).</li>
+  <li><strong>Data Aktivitas Mengajar</strong> — absensi, kasus siswa, jadwal, catatan anekdot, dan buku jurnal yang Anda masukkan sendiri ke dalam aplikasi. Data ini hanya Anda yang bisa akses.</li>
+</ul>
+<p style="margin-top:0.75rem">Kami <strong>tidak</strong> mengumpulkan: nomor telepon, data pembayaran, lokasi GPS, atau data perangkat keras.</p>
+
+<h2>2. Cara Kami Menggunakan Data</h2>
+<ul>
+  <li>Mengautentikasi identitas Anda saat masuk ke aplikasi.</li>
+  <li>Menyimpan dan menyinkronkan data pekerjaan Anda ke cloud (fitur Jurnal Guru &amp; EduTrack).</li>
+  <li>Menampilkan nama Anda di halaman sambutan dan laporan yang Anda buat sendiri.</li>
+  <li>Mengirimkan pengumuman penting terkait layanan (hanya via aplikasi, bukan email marketing).</li>
+</ul>
+
+<h2>3. Layanan Pihak Ketiga</h2>
+<div class="card">
+  <p>Kami menggunakan layanan-layanan berikut untuk mengoperasikan platform ini:</p>
+  <ul style="margin-top:0.75rem">
+    <li><strong>Google OAuth 2.0</strong> — untuk proses login. Kami hanya menerima data profil dasar (email &amp; nama). Kebijakan privasi Google: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
+    <li><strong>Supabase</strong> — penyimpanan database terenkripsi. Data disimpan di server Supabase yang berlokasi di Singapore (ap-southeast-1). Kebijakan privasi Supabase: <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a></li>
+    <li><strong>Vercel</strong> — hosting aplikasi web. Kebijakan privasi Vercel: <a href="https://vercel.com/legal/privacy-policy" target="_blank">vercel.com/legal/privacy-policy</a></li>
+  </ul>
+</div>
+
+<h2>4. Penyimpanan &amp; Keamanan Data</h2>
+<ul>
+  <li>Data aktivitas mengajar Anda disimpan secara terenkripsi di infrastruktur Supabase.</li>
+  <li>Akses data dilindungi oleh Row Level Security (RLS) — hanya akun Anda yang bisa membaca &amp; menulis data Anda.</li>
+  <li>Koneksi ke server menggunakan HTTPS/TLS (terenkripsi end-to-end).</li>
+  <li>Kami tidak pernah menyimpan password — autentikasi sepenuhnya ditangani oleh Google.</li>
+</ul>
+
+<h2>5. Retensi Data</h2>
+<p>Data Anda disimpan selama akun Anda aktif. Jika Anda meminta penghapusan akun, seluruh data yang terkait akan dihapus secara permanen dari server kami dalam waktu <strong>30 hari kerja</strong>. Data di localStorage browser Anda dapat Anda hapus sendiri kapan saja melalui pengaturan browser.</p>
+
+<h2>6. Hak-Hak Anda</h2>
+<p>Sebagai pengguna, Anda berhak untuk:</p>
+<ul>
+  <li><strong>Akses</strong> — meminta salinan data yang kami simpan tentang Anda.</li>
+  <li><strong>Koreksi</strong> — memperbarui data yang tidak akurat (bisa dilakukan langsung di aplikasi).</li>
+  <li><strong>Portabilitas</strong> — mengunduh semua data Anda dalam format JSON melalui fitur "Backup Data" di menu Setelan.</li>
+  <li><strong>Penghapusan</strong> — meminta agar akun dan seluruh data Anda dihapus permanen.</li>
+</ul>
+<p style="margin-top:0.75rem">Untuk menggunakan hak-hak di atas, hubungi kami di: <strong>miqdadabdussalam08@gmail.com</strong></p>
+
+<h2>7. Cookie &amp; Penyimpanan Lokal</h2>
+<p>Aplikasi kami menggunakan <strong>localStorage</strong> browser (bukan cookie) untuk menyimpan preferensi tampilan dan data offline. Tidak ada cookie pelacakan (tracking cookies) atau cookie iklan yang digunakan. LocalStorage dapat Anda hapus setiap saat melalui browser.</p>
+
+<h2>8. Anak-Anak</h2>
+<p>Layanan kami ditujukan untuk guru dewasa. Kami tidak secara sengaja mengumpulkan data pribadi dari individu di bawah usia 13 tahun. Data siswa yang dimasukkan ke aplikasi adalah tanggung jawab guru/sekolah yang bersangkutan.</p>
+
+<h2>9. Perubahan Kebijakan</h2>
+<p>Jika kebijakan ini diperbarui secara material, kami akan memberitahu melalui notifikasi dalam aplikasi setidaknya 7 hari sebelum perubahan berlaku. Penggunaan berkelanjutan setelah perubahan berlaku dianggap sebagai persetujuan terhadap kebijakan baru.</p>
+
+<h2>10. Kontak</h2>
+<p>Pertanyaan tentang privasi Anda dapat diajukan ke:<br>
+📧 <a href="mailto:miqdadabdussalam08@gmail.com">miqdadabdussalam08@gmail.com</a><br>
+💬 WhatsApp: <a href="https://wa.me/62895397265635" target="_blank">+62 895-397-265-635</a></p>
+
+<footer>
+  <p>© 2026 Digital Ally Project — Miqdad Abdussalam · <a href="terms.html">Syarat &amp; Ketentuan</a></p>
+</footer>
+</body>
+</html>
